@@ -11,5 +11,5 @@ curl -H "Content-Type: application/json" -X POST ${BASE_DOMAIN} -d '{"userId": "
 
 ## Test the new functionality
 ```bash
-curl -H "Content-Type: application/json" -X GET ${BASE_DOMAIN}alexdebrie1
+curl -H "Content-Type: application/json" -X GET ${BASE_DOMAIN}/alexdebrie1
 ```
