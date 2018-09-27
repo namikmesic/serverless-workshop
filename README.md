@@ -1,3 +1,4 @@
+## Serverless Workshop Part 3 = sls
 ## Objectives
 - Set path specific routing for different api calls (Dedicated API endpoint)
 - Discuss benefits and downsides of each approach
