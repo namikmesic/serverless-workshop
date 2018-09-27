@@ -1,6 +1,20 @@
 service: my-express-application
 
 custom:
+  alerts:
+    stages:
+      - production
+      - namik
+    topics:
+      alarm:
+        topic: ${self:service}-${self:provider.stage}-alerts-alarm
+        notifications:
+          - protocol: email
+            endpoint: namikmesic@gmail.com # Change this to your email address
+    alarms:
+      - functionErrors
+      - functionThrottles
+
   tableName: 'users-table-${self:provider.stage}'
   dynamodb:
     start:
@@ -8,6 +22,7 @@ custom:
 
 plugins:
   - serverless-dynamodb-local
+  - serverless-plugin-aws-alerts
   - serverless-offline
 
 provider:
