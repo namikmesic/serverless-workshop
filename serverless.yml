@@ -3,8 +3,9 @@ service: my-express-application
 custom:
   alerts:
     stages:
-      - dev
+      - acc
       - prod
+
     topics:
       alarm:
         topic: ${self:service}-${self:provider.stage}-alerts-alarm
