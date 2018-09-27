@@ -26,7 +26,7 @@ export STAGE=<your-name>
 serverless deploy --verbose
 ```
 
-## Test the new functionality
+## Step 3 - Test the new functionality
 ```bash
 export BASE_DOMAIN=<your-dev-endpoint>
 # Create user
