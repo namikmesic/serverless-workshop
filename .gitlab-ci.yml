@@ -1,0 +1,24 @@
+image: node:8.12.0
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules/
+  - .serverless/
+
+before_script:
+  - npm install -g serverless express serverless-http aws-sdk body-parser serverless-plugin-aws-alerts
+
+stages:
+  - deploy
+
+deploy_to_aws:
+  variables:
+    AWS_ACCESS_KEY_ID: $_AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: $_AWS_SECRET_ACCESS_KEY
+    AWS_DEFAULT_REGION: $_AWS_DEFAULT_REGION
+    STAGE: dev
+  stage: deploy
+  script:
+   - npm install
+   - serverless deploy --stage $STAGE --verbose
