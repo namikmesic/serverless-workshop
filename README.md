@@ -18,7 +18,7 @@ curl -H "Content-Type: application/json" -X GET http://localhost:3000/users/alex
 
 # Invoke app function 'Hello Wolrd' locally
 export IS_OFFLINE=true # Make sure you have this set up in your new terminal window
-export STAGE=<your-name> # Make sure serverless is looking at the same application
+export STAGE=<your-name> # Make sure serverless is looking at the same application instance
 
 serverless invoke local --function createUser --path test_events/create_user.json
 # Invoke create user function
