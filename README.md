@@ -21,7 +21,7 @@ export AWS_SECRET_ACCESS_KEY: <your-secret-access-key>
 export AWS_DEFAULT_REGION: eu-west-1
 serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
 ```
-## Deploy your application
+## Step 3 - Deploy your application
 ```bash
 npm init -f
 npm install --save express serverless-http
@@ -29,7 +29,7 @@ export STAGE=<your-name>
 serverless deploy --verbose
 ```
 
-## Test your application
+## Step 4 - Test your application
 ```bash
 export BASE_DOMAIN=<your-base-domain-endpoint>
 curl $BASE_DOMAIN
