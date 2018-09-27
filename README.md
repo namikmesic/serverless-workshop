@@ -7,12 +7,12 @@
 ## Step 1 - Check updates we made
 - Check `serverless.yml` file compared to Part 2
 
-## Re-deploy your application
+## Step 2 - Re-deploy your application
 ```bash
 serverless deploy --verbose
 ```
 
-## Test the new functionality
+## Step 3 - Test the new functionality
 ```bash
 export STAGE=<your-name>
 export BASE_DOMAIN=<your-dev-endpoint>
