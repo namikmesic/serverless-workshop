@@ -36,10 +36,11 @@ curl -X POST $BASE_DOMAIN/users -H 'Content-Type: application/json' -H 'x-api-ke
 # You can protect this endpoint simply by making it private
 curl -H "Content-Type: application/json" -X GET ${BASE_DOMAIN}/users/testuser
 ```
-
+curl -X POST $BASE_DOMAIN/users -H 'Content-Type: application/json' -H 'x-api-key: <your-api-key>' -d  '{"userId": "testuser", "name": "testing tester"}'
 Test monitoring
 - Check your e-mail after deploying the app, and accept subscription
 - Break something in the function and re-deploy function
+
 ```bash
 # For example
 # First edit intex.js and break it somewhere around creating user
@@ -51,4 +52,4 @@ serverless deploy function -f createUser
 curl -X POST $BASE_DOMAIN/users -H 'Content-Type: application/json' -H 'x-api-key: <your-api-key>' -d  '{"userId": "testuser", "name": "testing tester"}'
 
 # Soon you should be receiveng an e-mail that something went wrong with your lambda function
-```
+``g`
