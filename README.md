@@ -17,8 +17,10 @@ curl -H "Content-Type: application/json" -X POST http://localhost:3000/users -d 
 curl -H "Content-Type: application/json" -X GET http://localhost:3000/users/alexdebrie1
 
 # Invoke app function 'Hello Wolrd' locally
-sls invoke local --function app
+export IS_OFFLINE=true # Make sure you have this set up in your new terminal window
+export STAGE=<your-name> # Make sure serverless is looking at the same application
 
+serverless invoke local --function createUser --path test_events/create_user.json
 # Invoke create user function
 
 ```
@@ -26,7 +28,7 @@ sls invoke local --function app
 ## Check changes in local dynamodb
 ```bash
 aws dynamodb list-tables --endpoint-url http://localhost:8000
-aws dynamodb scan --table-name <your-table-name> --endpoint-url http://localhost:8000
+aws dynamodb scan --table-name $YOUR_TABLE_NAME --endpoint-url http://localhost:8000
 ```
 
 There are may aws service we can run locally: https://github.com/atlassian/localstack
