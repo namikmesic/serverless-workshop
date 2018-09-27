@@ -10,7 +10,7 @@ custom:
         topic: ${self:service}-${self:provider.stage}-alerts-alarm
         notifications:
           - protocol: email
-            endpoint: namikmesic@gmail.com # Change this to your email address
+            endpoint: ${env:EMAIL} # Change this to your email address
     alarms:
       - functionErrors
       - functionThrottles
@@ -30,6 +30,8 @@ provider:
   runtime: nodejs6.10
   stage: ${env:STAGE}
   region: eu-west-2
+  # deploymentBucket:
+  #   name: com.serverless.${self:service}.${self:provider.stage}.deploys
   iamRoleStatements:
     - Effect: Allow
       Action:
