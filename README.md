@@ -1,4 +1,4 @@
-# Serverless Workshop Part 1
+# Serverless Workshop Part 1 - sls
 
 ## Objectives
 - Install and configure serverless
