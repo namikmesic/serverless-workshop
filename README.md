@@ -36,7 +36,7 @@ curl -X POST $BASE_DOMAIN/users -H 'Content-Type: application/json' -H 'x-api-ke
 # You can protect this endpoint simply by making it private
 curl -H "Content-Type: application/json" -X GET ${BASE_DOMAIN}/users/testuser
 ```
-curl -X POST $BASE_DOMAIN/users -H 'Content-Type: application/json' -H 'x-api-key: <your-api-key>' -d  '{"userId": "testuser", "name": "testing tester"}'
+
 Test monitoring
 - Check your e-mail after deploying the app, and accept subscription
 - Break something in the function and re-deploy function
