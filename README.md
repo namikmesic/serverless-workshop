@@ -3,6 +3,7 @@
 ## Objectives
 - Install and configure serverless
 - Deploy simple application and check your AWS cloudformation stacks to see result
+- Test your application
 
 #### Step 1 - Set up Environment
 Install and confugre [npm](https://docs.npmjs.com/getting-started/installing-node)
@@ -26,4 +27,10 @@ npm init -f
 npm install --save express serverless-http
 export STAGE=<your-name>
 serverless deploy --verbose
+```
+
+## Test your application
+```bash
+export BASE_DOMAIN=<your-base-domain-endpoint>
+curl $BASE_DOMAIN
 ```
