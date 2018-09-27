@@ -52,4 +52,4 @@ serverless deploy function -f createUser
 curl -X POST $BASE_DOMAIN/users -H 'Content-Type: application/json' -H 'x-api-key: <your-api-key>' -d  '{"userId": "testuser", "name": "testing tester"}'
 
 # Soon you should be receiveng an e-mail that something went wrong with your lambda function
-``g`
+```
