@@ -1,3 +1,5 @@
+## Add simple authentication to your api gateway
+Check yaml for `apiKeys` configuration
 ## Add some monitoring
 ```bash
 npm install serverless-plugin-aws-alerts --save-dev

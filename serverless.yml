@@ -45,6 +45,8 @@ provider:
         - { "Fn::GetAtt": ["UsersDynamoDBTable", "Arn" ] }
   environment:
     USERS_TABLE: ${self:custom.tableName}
+  apiKeys:
+    - ${env:STAGE}-myFirstKey
 
 functions:
   app:
