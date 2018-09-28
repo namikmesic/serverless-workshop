@@ -39,3 +39,4 @@ deploy-prod:
   when: manual
   only:
     - master
+  allow_failure: false
