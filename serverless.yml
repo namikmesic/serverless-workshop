@@ -3,7 +3,6 @@ service: my-express-application
 custom:
   alerts:
     stages:
-      - acc
       - prod
 
     topics:
