@@ -22,4 +22,4 @@ deploy_to_aws:
   stage: deploy
   script:
    - npm install
-   - serverless deploy --stage $STAGE --verbose
+   - serverless deploy --verbose
