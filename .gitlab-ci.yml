@@ -18,6 +18,7 @@ deploy_to_aws:
     AWS_SECRET_ACCESS_KEY: $_AWS_SECRET_ACCESS_KEY
     AWS_DEFAULT_REGION: $_AWS_DEFAULT_REGION
     STAGE: acc
+    EMAIL: namikmesic@gmail.com
   stage: deploy
   script:
    - npm install
