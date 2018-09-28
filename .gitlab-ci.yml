@@ -23,7 +23,7 @@ deploy-acc:
    - npm install
    - serverless deploy --verbose
   only:
-    -master
+    - master
 
 deploy-prod:
   variables:
