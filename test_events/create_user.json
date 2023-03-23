@@ -1,8 +1,0 @@
-{
-    "path": "/users",
-    "httpMethod": "POST",
-    "headers": {
-        "content-type": "application/json"
-    },
-    "body": "{\"userId\":\"namik\",\"name\":\"Namik Mesic\"}"
-}
